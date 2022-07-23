@@ -179,7 +179,19 @@ em 4 clusters por meio das estatísticas definidas:
 Assim, atingi uma divisão bem mais definida dos jogadores no gráfico de dispersão do que a
 vista anteriormente no início dessa análise.
 
+Analisando as médias de cada cluster, é possível dizer o que representam:
+
 ![image](https://user-images.githubusercontent.com/82617621/179444682-fa3cd8bf-357c-4164-a7c9-1dbad9095fef.png)
+
+Analisando as médias de cada cluster, é possível dizer o que representam:
+
+Roxo: Jogadores com baixas estatísticas.
+
+Verde: "Big Men" (responsáveis por bloqueios rebotes e enterradas).
+
+Azul: Jogadores com baixa posse de bola e maior pontuação.
+
+Amarelo: Jogadores com alta posse de bola e pontuação.
 
 Utilizando a mesma lógica do SVD utilizada anteriormente, defini uma função para encontrar os
 planos de cada cluster e ver o quanto um jogador está próximo desses. Assim desenvolvi a função
@@ -195,11 +207,16 @@ Dessa vez, tive 264 acertos e 266 erros em uma amostragem de 530 jogadores.
 Os resultados já foram mais satisfatórios do que com as posições originais, porém,
 ainda não foi possível adivinhar com exatidão os jogadores e o cluster/posição ao qual pertencem.
 
-A clusterização também não permite um modelo de acertos aproximados, já que não se sabe a proximidade da atuação no jogo de cada cluster.
 ## Conclusões
 
 Portanto, por meio das observações estatísticas e visuais, percebe-se que é muito difícil 
 definir com exatidão a posição de um jogador. Por que isso acontece?
+
+- Jogadores com Pouca Participação:
+    
+    Ao analisar a divisão criada pela clusterização, fica claro que os jogadores com baixas estatísticas se tornam uma
+    categoria por si só. Como esses participam por poucos minutos do jogo, se torna muito difícil entender qual posição eles jogam,
+    já que temos poucos dados em relação a sua forma de jogar. Assim, atrapalhando a análise da posição, que pode ser facilmente confundida.
 
 - Jogadores Estrelas:
     
